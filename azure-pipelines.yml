@@ -20,7 +20,9 @@ steps:
     command: 'restore'
     restoreSolution: 'Application/SampleWebApplication.sln'
     feedsToUse: 'select'
-
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
