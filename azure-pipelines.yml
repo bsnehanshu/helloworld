@@ -18,7 +18,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: restore
-    projects: 'C:\Users\Snehanshu\source\repos\MvcMovie\MvcMovie.csproj'
+    projects: 'snehawebappcicd/Application/SampleWebApplication/SampleWebApplication.csproj'
     feedsToUse: config
     nugetConfigPath: NuGet.config    # Relative to root of the repository
     externalFeedCredentials: <Name of the NuGet service connection>
