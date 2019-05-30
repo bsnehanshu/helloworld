@@ -15,13 +15,11 @@ steps:
 - task: DotNetCoreInstaller@0
   inputs:
     version: '2.1.300'
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
   inputs:
-    command: restore
-    projects: 'snehawebappcicd/Application/SampleWebApplication/SampleWebApplication.csproj'
-    feedsToUse: config
-    nugetConfigPath: NuGet.config    # Relative to root of the repository
-    externalFeedCredentials: <Name of the NuGet service connection>
+    command: 'restore'
+    restoreSolution: 'Application/SampleWebApplication.sln'
+    feedsToUse: 'select'
 
 
 - script: |
