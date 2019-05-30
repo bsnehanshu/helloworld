@@ -10,12 +10,13 @@ pool:
   vmImage: 'ubuntu-16.04' # examples of other options: 'macOS-10.13', 'vs2017-win2016'
 
 steps:
+- script: dotnet restore
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 - task: DotNetCoreInstaller@0
   inputs:
     version: '2.1.300'
-- script: dotnet restore
+
 
 
 - script: |
